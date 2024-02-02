@@ -17,7 +17,6 @@ class AnimalsController < ApplicationController
       end
     end
   
-    # ... existing code ...
   
     private
   
