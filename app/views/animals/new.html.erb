@@ -1,0 +1,20 @@
+<!-- app/views/animals/new.html.erb -->
+<h1>New Animal</h1>
+
+<%= form_for @animal do |f| %>
+  <div>
+    <%= f.label :common_name %>
+    <%= f.text_field :common_name %>
+  </div>
+
+  <div>
+    <%= f.label :scientific_binomial %>
+    <%= f.text_field :scientific_binomial %>
+  </div>
+
+  <div>
+    <%= f.submit "Create Animal" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to Animals', animals_path %>

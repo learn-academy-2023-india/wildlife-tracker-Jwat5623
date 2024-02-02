@@ -1,0 +1,33 @@
+<%= form_for @animal do |f| %>
+  <div>
+    <%= f.label :common_name %>
+    <%= f.text_field :common_name %>
+  </div>
+
+  <div>
+    <%= f.label :scientific_binomial %>
+    <%= f.text_field :scientific_binomial %>
+  </div>
+
+  <h2>Sighting Details</h2>
+  <%= f.fields_for :sightings do |sighting_fields| %>
+    <div>
+      <%= sighting_fields.label :latitude %>
+      <%= sighting_fields.text_field :latitude %>
+    </div>
+
+    <div>
+      <%= sighting_fields.label :longitude %>
+      <%= sighting_fields.text_field :longitude %>
+    </div>
+
+    <div>
+      <%= sighting_fields.label :date %>
+      <%= sighting_fields.date_field :date %>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.submit "Create Animal" %>
+  </div>
+<% end %>
